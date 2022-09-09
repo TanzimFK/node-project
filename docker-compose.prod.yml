@@ -9,4 +9,13 @@ services:
       context: .
       args:
         NODE_ENV: 'production'
+    environment:
+      - MONGO_USER=${MONGO_USER}
+      - MONGO_PASSWORD=${MONGO_PASSWORD}
+      - COMPOSE_PROJECT_NAME=${COMPOSE_PROJECT_NAME}
     command: node server.js
+  
+  mongo:
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
