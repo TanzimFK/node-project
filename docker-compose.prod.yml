@@ -5,6 +5,12 @@ services:
     ports:
       - "80:80"
   node-app:
+    deploy:
+      replicas: 4
+      restart_policy:
+        conditions: any
+        parallelism: 2
+        delay: 15s
     build: 
       context: .
       args:
@@ -19,3 +25,4 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
       - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+  

@@ -56,8 +56,8 @@ app.use("/api/v1/posts", postRouter);
 
 app.get('/api', function (req, res) {
   
-  res.send('HACKED YAKUZA!!')
-  console.log("Hell yea")
+  res.send('HACKED YAKUZA!!!!!')
+  // console.log("Hell yea")
 })
 
 const port = process.env.PORT || 3000
