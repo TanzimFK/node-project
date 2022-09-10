@@ -22,10 +22,10 @@ services:
   redis:
     image: redis
 
-networks:
-  default:
-    name: my_network
-    external: true
+# networks:
+#   default:
+#     name: my_network
+#     external: true
 
 volumes: 
   db-data:
