@@ -10,6 +10,7 @@ services:
   
   node-app:
     build: .
+    image: tanzim3421/node-app
     depends_on:
       - mongo
 
